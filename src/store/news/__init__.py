@@ -1,0 +1,1 @@
+_STORE_MODULE_PATH = 'store.news.%s'

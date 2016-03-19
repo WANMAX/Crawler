@@ -1,0 +1,1 @@
+_WEIBO_MODULE_PATH = 'web.weibo.%s'

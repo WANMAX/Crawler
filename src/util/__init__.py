@@ -1,0 +1,2 @@
+PROXY = False
+INSCHOOL = False
