@@ -209,4 +209,4 @@ def change_user(username=None):
         username = list_[current_index+1]
     load_cookie(username)
 if __name__ == '__main__':
-    auto_login('18819423713@163.com')
+    login_all_default_user()

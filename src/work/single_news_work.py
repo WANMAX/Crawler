@@ -89,9 +89,9 @@ def work(news_module_str, store_module_str, date_=None):
 
 if __name__ == '__main__':
     logging.config.fileConfig('%s/logging_config.conf'%WORK_PATH)
-    date = '201602%02u'
-    start = 25
-    stop = 25
+    date = '201603%02u'
+    start = 31
+    stop = 31
     while start <= stop:
         date2 = date%start
         start += 1

@@ -55,7 +55,7 @@ def match_news(html, url):
     else:
         news_image = None
     content = '\n'.join([item.text.strip() for item in main_text.find_all('p')])
-    date_source_div =  soup.find('div', class_=re.compile('ep-time-soure'))
+    date_source_div =  soup.find('div', class_=re.compile('post_time_source'))
     if not date_source_div:return
     source_a = date_source_div.a
     source_url =  source_a['href']
@@ -65,7 +65,7 @@ def match_news(html, url):
     date = time.mktime(date)
     title = soup.title.text
     title = title[:title.rfind('_')]
-    thread_id = re.search('threadId = "(\\S+?)"', html).group(1)
+    thread_id = re.search('"docId" : "([^"]+)"', html).group(1)
     comment_url_args = (thread_id, )
     return News(url, comment_url_args, title, content, source, date, source_url, news_image=news_image)
 PAGE_COMMENTS_NUM = 30
